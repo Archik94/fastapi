@@ -147,7 +147,7 @@ print(response.json())
 
 
 response = requests.get(
-    "http://127.0.0.1:8080/v1/advertisement?creator=Ivan",
+    "http://127.0.0.1:8080/advertisement?creator=Ivan",
 )
 print(response.status_code)
 print(response.json())
