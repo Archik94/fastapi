@@ -18,7 +18,7 @@ async def get_adv(advertisement_id: int, session: SessionDependency):
 
 
 @app.get("/advertisement")
-async def get_item_by_qs(session: SessionDependency, title: str = None,
+async def get_adv_by_qs(session: SessionDependency, title: str = None,
                         description: str = None, price: str = None, creator: str = None):
     advs = await crud.get_item_by_qs(session, title, description, price, creator)
     return advs
