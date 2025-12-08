@@ -28,7 +28,7 @@ class Adv(Base):
     title: Mapped[str] = mapped_column(String, nullable=False)
     description: Mapped[str] = mapped_column(String, nullable=False)
     price: Mapped[float] = mapped_column(Float, nullable=False)
-    creator: Mapped[str] = mapped_column(String, nullable=False)
+    author: Mapped[str] = mapped_column(String, nullable=False)
     created_at: Mapped[datetime.datetime] = mapped_column(
         DateTime, server_default=func.now()
     )
@@ -41,7 +41,7 @@ class Adv(Base):
             "title": self.title,
             "description": self.description,
             "price": self.price,
-            "creator": self.creator,
+            "author": self.author,
             "created_at": self.created_at.isoformat(),
         }
 
