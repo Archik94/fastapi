@@ -2,10 +2,10 @@ import requests
 
 
 response = requests.post(
-    "http://127.0.0.1:8080/v1/advertisement",
+    "http://127.0.0.1:8080/advertisement",
     json={
         "title": "Дрель",
-        "description": "Качественная",
+        "description": "Качественный",
         "price": 4.01,
         "creator": "Igor",
     },
@@ -15,19 +15,19 @@ print(response.json())
 
 
 response = requests.get(
-    "http://127.0.0.1:8080/v1/advertisement/1",
+    "http://127.0.0.1:8080/advertisement/1",
 )
 print(response.status_code)
 print(response.json())
 
 
 response = requests.post(
-    "http://127.0.0.1:8080/v1/advertisement",
+    "http://127.0.0.1:8080/advertisement",
     json={
         "title": "Рюкзак",
         "description": "Красный",
         "price": 10.33,
-        "creator": "Eugene",
+        "creator": "Ivan",
     },
 )
 print(response.status_code)
@@ -35,14 +35,14 @@ print(response.json())
 
 
 response = requests.get(
-    "http://127.0.0.1:8080/v1/advertisement/1",
+    "http://127.0.0.1:8080/advertisement/1",
 )
 print(response.status_code)
 print(response.json())
 
 
-response = requests.patch("http://127.0.0.1:8080/v1/advertisement/1", json={
-    "title": "Перфоратор",
+response = requests.patch("http://127.0.0.1:8080/advertisement/1", json={
+    "title": "Дрель",
     "price": 6.01,
 })
 print(response.status_code)
@@ -50,21 +50,21 @@ print(response.json())
 
 
 response = requests.get(
-    "http://127.0.0.1:8080/v1/advertisement/1",
+    "http://127.0.0.1:8080/advertisement/1",
 )
 print(response.status_code)
 print(response.json())
 
 
 response = requests.get(
-    "http://127.0.0.1:8080/v1/advertisement/2",
+    "http://127.0.0.1:8080/advertisement/2",
 )
 print(response.status_code)
 print(response.json())
 
 
 response = requests.delete(
-    "http://127.0.0.1:8080/v1/advertisement/2",
+    "http://127.0.0.1:8080/advertisement/2",
 )
 print(response.status_code)
 print(response.json())
@@ -72,14 +72,14 @@ print(response.json())
 
 
 response = requests.get(
-    "http://127.0.0.1:8080/v1/advertisement/2",
+    "http://127.0.0.1:8080/advertisement/2",
 )
 print(response.status_code)
 print(response.json())
 
 
 response = requests.post(
-    "http://127.0.0.1:8080/v1/advertisement",
+    "http://127.0.0.1:8080/advertisement",
     json={
         "title": "Шапка",
         "description": "В хорошем состоянии",
@@ -92,7 +92,7 @@ print(response.json())
 
 
 response = requests.post(
-    "http://127.0.0.1:8080/v1/advertisement",
+    "http://127.0.0.1:8080/advertisement",
     json={
         "title": "Шуруповерт",
         "description": "Хорошее состояние",
@@ -105,42 +105,42 @@ print(response.json())
 
 
 response = requests.get(
-    "http://127.0.0.1:8080/v1/advertisement",
+    "http://127.0.0.1:8080/advertisement",
 )
 print(response.status_code)
 print(response.json())
 
 
 response = requests.get(
-    "http://127.0.0.1:8080/v1/advertisement?title=Перфоратор",
+    "http://127.0.0.1:8080/advertisement?title=Дрель",
 )
 print(response.status_code)
 print(response.json())
 
 
 response = requests.get(
-    "http://127.0.0.1:8080/v1/advertisement?description=сост",
+    "http://127.0.0.1:8080/advertisement?description=сост",
 )
 print(response.status_code)
 print(response.json())
 
 
 response = requests.get(
-    "http://127.0.0.1:8080/v1/advertisement?price=6.01",
+    "http://127.0.0.1:8080/advertisement?price=6.01",
 )
 print(response.status_code)
 print(response.json())
 
 
 response = requests.get(
-    "http://127.0.0.1:8080/v1/advertisement?creator=Victor",
+    "http://127.0.0.1:8080/advertisement?creator=Victor",
 )
 print(response.status_code)
 print(response.json())
 
 
 response = requests.get(
-    "http://127.0.0.1:8080/v1/advertisement?description=сост&price=1.02",
+    "http://127.0.0.1:8080/advertisement?description=сост&price=1.02",
 )
 print(response.status_code)
 print(response.json())
